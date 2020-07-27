@@ -33,31 +33,31 @@ from tornado.httpserver import HTTPServer
 import json
 
 
-# class IndexHandler(RequestHandler):
-#
-#     def get(self):
-#         # 获取get方式传递的参数
-#         username = self.get_query_argument("username")
-#         usernames = self.get_query_arguments("username")
-#
-#         print (username)
-#         print (usernames)
-#
-#     def post(self):
-#         # 获取post方式传递的参数
-#         username = self.get_body_argument("username")
-#         usernames = self.get_body_arguments("username")
-#
-#         print (username)
-#         print (usernames)
+class IndexHandler(RequestHandler):
+
+    def get(self):
+        # 获取get方式传递的参数
+        username = self.get_query_argument("username")
+        usernames = self.get_query_arguments("username")
+
+        print (username)
+        print (usernames)
+
+    def post(self):
+        # 获取post方式传递的参数
+        username = self.get_body_argument("username")
+        usernames = self.get_body_arguments("username")
+
+        print (username)
+        print (usernames)
 
 
 # request
-class IndexHandler(RequestHandler):
-    def get(self):
-        print(self.request)
-        json_str = {"user_name": "admin", "password": "1234556"}
-        self.write(json.dumps(json_str))
+# class IndexHandler(RequestHandler):
+#     def get(self):
+#         print(self.request)
+#         json_str = {"user_name": "admin", "password": "1234556"}
+#         self.write(json.dumps(json_str))
 
 
 
